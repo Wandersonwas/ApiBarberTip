@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IU2Cs5lOr8RLUSci2JlInZd9vCRO35mdPh/ko2wQk1UzqjGhB9Ulwzn6zZKkL4qkTgmFjRIM/VY7kob3IeNvfg==",
+  "dgSpecHash": "IjM7TrKr86pQXeS2i6gQuhUG/D4B1OKveBxdMYlvkVl9Jlvneae7Vtz9Sl5oj4loOSfAtBpgLFQholYy+r99Mg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\04163212167\\Desktop\\exercicio-barber\\ApiBarberTip\\ApiBarberTip.csproj",
+  "projectFilePath": "C:\\Users\\04163212167\\Desktop\\ApiBarberTip\\ApiBarberTip.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\04163212167\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

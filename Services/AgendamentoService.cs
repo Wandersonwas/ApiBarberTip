@@ -24,12 +24,39 @@ public class AgendamentoService{
         _context.Add(agendamento);
         _context.SaveChanges();
 
-        return null;
+        return null!;
     }
     public DetalhesAgendamentoViewModel? ListarAgendamentoPeloId(int id){
         
-        return null;
+        var agendamento = _context.Agendamentos.Include(C=>C.Cliente)
+                                               .FirstOrDefault(a=>a.Id ==id);
+        if(agendamento!=null){
 
+             var resultado = new DetalhesAgendamentoViewModel(
+                agendamento.Id,
+                agendamento.Data,
+                agendamento.Hora,
+                agendamento.IdCliente
+
+             );
+             /*
+            resultado.Cliente = new DetalhesAgendamentoViewModel(
+
+                agendamento.Cliente.Id,
+                agendamento.Cliente.Nome,
+                agendamento.Cliente.Telefone,
+                agendamento.Cliente.Email,
+                agendamento.Cliente.DataNascimento
+
+
+
+            );
+                */
+            return resultado;
+
+
+        }
+        return null;
     }
 }
 

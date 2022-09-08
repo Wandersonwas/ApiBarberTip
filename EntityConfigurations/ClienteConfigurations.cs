@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using BarberTip.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -21,7 +22,10 @@ public class ClienteConfigurations : IEntityTypeConfiguration<Cliente>
         builder.Property(a=>a.DataNascimento)
                .IsRequired(); //Data não tem tamanho porque é uma estrutura (struct)
                //DateTime = Struct
-               
+        builder.HasMany(a=>a.Agendamentos)
+               .WithOne(c=>c.Cliente)
+               .HasForeignKey(a=>a.IdCliente);
+
     
     }
 }
