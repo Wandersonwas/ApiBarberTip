@@ -12,5 +12,5 @@ public class DetalhesAgendamentoViewModel{
     public DateTime Data { get; set; }
     public DateTime Hora { get; set; }
     public int IdCliente { get; set; }
-    public Cliente Cliente { get; set; } = null!;    
+    public DetalhesClienteViewModel Cliente { get; set; } = null!;    
 }

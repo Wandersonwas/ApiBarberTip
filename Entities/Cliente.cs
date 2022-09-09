@@ -1,10 +1,13 @@
 
 using BarberTip.Contexts;
+using BarberTip.ViewModels;
+
 namespace BarberTip.Entities;
 
 public class Cliente{
-    public Cliente(string nome, string telefone, string email, DateTime dataNascimento)
+    public Cliente( string nome, string telefone, string email, DateTime dataNascimento)
     {
+       
         Nome = nome;
         Telefone = telefone;
         Email = email;
@@ -21,6 +24,8 @@ public class Cliente{
 
      public ICollection<Agendamento> Agendamentos { get; set; } = null!;
 
-
-
+    public static implicit operator Cliente(DetalhesClienteViewModel v)
+    {
+        throw new NotImplementedException();
+    }
 }
