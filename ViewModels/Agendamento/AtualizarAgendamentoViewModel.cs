@@ -1,7 +1,7 @@
 using BarberTip.Entities;
 namespace BarberTip.ViewModels;
 public class AtualizarAgendamentoViewModel{
-    public AtualizarAgendamentoViewModel(int id,DateTime data, DateTime hora, int idCliente)
+    public AtualizarAgendamentoViewModel(int id,DateOnly data, TimeOnly hora, int idCliente)
     {
         Id = id;    
         Data = data;
@@ -9,8 +9,8 @@ public class AtualizarAgendamentoViewModel{
         IdCliente = idCliente;
     }
     public int Id { get; set; }
-    public DateTime Data { get; set; }
-    public DateTime Hora { get; set; }
+    public DateOnly Data { get; set; }
+    public TimeOnly Hora { get; set; }
     public int IdCliente { get; set; }
-    public Cliente Cliente { get; set; } = null!;    
+       
 }
